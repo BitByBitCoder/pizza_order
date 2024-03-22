@@ -12,8 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pizzas', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+
             $table->timestamps();
+            $table->string('type');
+            $table->string('base');
+            $table->string('name');
+
         });
     }
 
